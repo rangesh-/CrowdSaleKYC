@@ -1,0 +1,317 @@
+{
+  "contract_name": "KYCCrowdSale",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "pricepertoken",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "deadline",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "beneficiary",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "Withdraw",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "fundingraised",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "CloseCrowdSale",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getFundsRaised",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "fundingexpected",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "IsKYCverified",
+          "type": "bool"
+        }
+      ],
+      "name": "ContributetoCrowdSale",
+      "outputs": [],
+      "payable": true,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "fundtoberaisedfor",
+          "type": "address"
+        },
+        {
+          "name": "fundcap",
+          "type": "uint256"
+        },
+        {
+          "name": "funddeadline",
+          "type": "uint256"
+        },
+        {
+          "name": "priceoftoken",
+          "type": "uint256"
+        },
+        {
+          "name": "erc20token",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "ContributedToCrowdSaleEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "FundCapReached",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040526006805462ffffff191690556002600755341561001d57fe5b60405160a08061089683398101604090815281516020830151918301516060840151608090940151919390915b60008054600160a060020a03808816600160a060020a031992831617909255600286905542603c860201600455670de0b6b3a7640000840260055560098054928416929091169190911790555b50505050505b6107ea806100ac6000396000f300606060405236156100935763ffffffff60e060020a6000350416630dcfa3f0811461009557806329dcb0cf146100b757806338af3eed146100d957806357ea89b6146101055780636a5de96b146101175780638da5cb5b146101395780638fd7860214610165578063b0e66aca14610177578063c3cf56d514610199578063e3810ede146101bb578063f8b2cb4f146101ca575bfe5b341561009d57fe5b6100a56101f8565b60408051918252519081900360200190f35b34156100bf57fe5b6100a56101fe565b60408051918252519081900360200190f35b34156100e157fe5b6100e9610204565b60408051600160a060020a039092168252519081900360200190f35b341561010d57fe5b610115610213565b005b341561011f57fe5b6100a5610334565b60408051918252519081900360200190f35b341561014157fe5b6100e961033a565b60408051600160a060020a039092168252519081900360200190f35b341561016d57fe5b610115610349565b005b341561017f57fe5b6100a56103f6565b60408051918252519081900360200190f35b34156101a157fe5b6100a56103fd565b60408051918252519081900360200190f35b6101156004351515610403565b005b34156101d257fe5b6100a5600160a060020a0360043516610729565b60408051918252519081900360200190f35b60055481565b60045481565b600054600160a060020a031681565b60045460009042116102255760006000fd5b60065460ff16151560011461023a5760006000fd5b60065462010000900460ff1615156102b25750600160a060020a033316600081815260086020526040808220549051909291670de0b6b3a7640000840280156108fc02929091818181858888f19350505050151561029457fe5b600160a060020a03331660009081526008602052604081205561032e565b60005433600160a060020a0390811691161480156102d8575060065462010000900460ff165b1561032e5760008054600354604051600160a060020a0390921692670de0b6b3a764000090910280156108fc02929091818181858888f19350505050151561031c57fe5b6006805462ff00001916905560006003555b5b5b5b50565b60035481565b600154600160a060020a031681565b60015433600160a060020a039081169116146103655760006000fd5b6004544210156103755760006000fd5b600254600354106103e5576006805462ff000019166201000017905560015460005460035460408051600160a060020a0394851681529290931660208301528183015290517f9730eee84d7fde951d271fb5812ebe8b291bc1a4ca4a45d100a4d925b5bbd3d69181900360600190a15b6006805460ff191660011790555b5b565b6003545b90565b60025481565b6006546000908190819060ff161561041b5760006000fd5b60045442111561042b5760006000fd5b6001670de0b6b3a764000034025b06156104455760006000fd5b600554670de0b6b3a76400003402101561045f5760006000fd5b34670de0b6b3a764000002925083156105575733600160a060020a038181166000908152600860205260409020805486019055600380548601905560095460055491169163a9059cbb91868115156104b357fe5b046040518363ffffffff1660e060020a0281526004018083600160a060020a0316600160a060020a0316815260200182815260200192505050600060405180830381600087803b151561050257fe5b6102c65a03f1151561051057fe5b50505060008051602061079f833981519152336005548581151561053057fe5b60408051600160a060020a03909416845291900460208301528051918290030190a161071e565b6007546009546040805160006020918201819052825160e060020a6370a08231028152600160a060020a033381166004830152935193909416936370a08231936024808301949391928390030190829087803b15156105b257fe5b6102c65a03f115156105c057fe5b5050604051519190911090506105d65760006000fd5b6009546040805160006020918201819052825160e060020a6370a08231028152600160a060020a033381166004830152935193909416936370a08231936024808301949391928390030190829087803b151561062e57fe5b6102c65a03f1151561063c57fe5b505050604051805190506007546005548581151561065657fe5b600160a060020a033381166000818152600860205260408082208054969095049690960396909601808a039485019093556003805485019055600954855160e060020a63a9059cbb0281526004810192909252602482018590529451929750929550929092169263a9059cbb9260448084019382900301818387803b15156106da57fe5b6102c65a03f115156106e857fe5b505060408051600160a060020a033316815260208101849052815160008051602061079f83398151915293509081900390910190a15b5b5b5b5b5b50505050565b6009546040805160006020918201819052825160e060020a6370a08231028152600160a060020a0386811660048301529351919493909316926370a0823192602480830193919282900301818787803b151561078157fe5b6102c65a03f1151561078f57fe5b5050604051519150505b9190505600d347fa894de8b704536ba0b917079b48a427161f8c21a61dc96e81e056615237a165627a7a7230582022aa5a5d77b040748e1a26df1a1ca0c717029168cfdaede806e55a079009906c0029",
+  "networks": {
+    "1506112159639": {
+      "events": {},
+      "links": {},
+      "address": "0xbdd6ad780794c27b13d8896674259351c67164bc",
+      "updated_at": 1506112194552
+    },
+    "1506148592031": {
+      "events": {},
+      "links": {},
+      "address": "0x71f77d977f85099315c84e0d44626fe6b224271f",
+      "updated_at": 1506148663139
+    },
+    "1506238992609": {
+      "events": {
+        "0xd347fa894de8b704536ba0b917079b48a427161f8c21a61dc96e81e056615237": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "ContributedToCrowdSaleEvent",
+          "type": "event"
+        },
+        "0x9730eee84d7fde951d271fb5812ebe8b291bc1a4ca4a45d100a4d925b5bbd3d6": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "beneficiary",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "FundCapReached",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x1e9d638cfa289cfe8d8c0df77e26e4958bb4119e",
+      "updated_at": 1506239084335
+    },
+    "1506239939411": {
+      "events": {
+        "0xd347fa894de8b704536ba0b917079b48a427161f8c21a61dc96e81e056615237": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "ContributedToCrowdSaleEvent",
+          "type": "event"
+        },
+        "0x9730eee84d7fde951d271fb5812ebe8b291bc1a4ca4a45d100a4d925b5bbd3d6": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "beneficiary",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "FundCapReached",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x833484dc6b24c2e3cc33fb9f3e7913f3899b6a13",
+      "updated_at": 1506240183172
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1506240183172
+}
